@@ -12,49 +12,47 @@
 
 ###### Geral
 
-git help
+- git help
 
 ###### Comando específico
 
-  git help add
-  git help commit
-  git help <qualquer_comando_git>
+- git help add
+
+- git help commit
+
+- git help <qualquer_comando_git>
 
 ###### Configuração
 
 Geral   As configurações do GIT são armazenadas no arquivo .gitconfig localizado dentro do diretório do usuário do Sistema Operacional (Ex.: Windows: C:\Users\Documents and Settings\Leonardo ou *nix /home/leonardo).
 
-As configurações realizadas através dos comandos abaixo serão incluídas no arquivo citado acima.
+As configurações realizadas através dos comandos abaixo serão   incluídas no arquivo citado acima.
 
 Setar usuário
-git config --global user.name "Leonardo Comelli"
 
+- git config --global user.name "Leonardo Comelli"
 
+###### Setar email
 
-Setar email
-git config --global user.email leonardo@software-ltda.com.br
+- git config --global user.email leonardo@software-ltda.com.br
 
+###### Setar editor
 
+- git config --global core.editor vim
 
-Setar editor
-git config --global core.editor vim
+###### Setar ferramenta de merge
 
+- git config --global merge.tool vimdiff
 
+###### Setar arquivos a serem ignorados
 
-Setar ferramenta de merge
-git config --global merge.tool vimdiff
+- git config --global core.excludesfile ~/.gitignore
 
+###### Listar configurações
 
+- git config --list
 
-Setar arquivos a serem ignorados
-git config --global core.excludesfile ~/.gitignore
-
-
-
-Listar configurações
-git config --list
-
-#### Ignorar Arquivos
+###### Ignorar Arquivos
 
 Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo .gitignore não serão adicionados em um repositório. Existem dois arquivos .gitignore, são eles:
 
@@ -62,92 +60,74 @@ Os nomes de arquivos/diretórios ou extensões de arquivos listados no arquivo .
 
 * Por repositório: Deve ser armazenado no diretório do repositório e deve conter a lista dos arquivos/diretórios que devem ser ignorados apenas para o repositório específico.
 
+#### Repositório Local
 
+###### Criar novo repositório
 
-Repositório Local
+- git init
 
+###### Verificar estado dos arquivos/diretórios
 
+- git status
 
-Criar novo repositório
-git init
+###### Adicionar arquivo/diretório (staged area)
 
+###### Adicionar um arquivo em específico
 
+- git add meu_arquivo.txt
 
-Verificar estado dos arquivos/diretórios
-git status
+###### Adicionar um diretório em específico
 
+- git add meu_diretorio
 
+###### Adicionar todos os arquivos/diretórios
 
-Adicionar arquivo/diretório (staged area)
+- git add .    
 
-Adicionar um arquivo em específico
-git add meu_arquivo.txt
+###### Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)
 
+- git add -f arquivo_no_gitignore.txt
 
-
-Adicionar um diretório em específico
-git add meu_diretorio
-
-
-
-Adicionar todos os arquivos/diretórios
-git add .    
-
-
-
-Adicionar um arquivo que esta listado no .gitignore (geral ou do repositório)
-git add -f arquivo_no_gitignore.txt
-
-
-
-Comitar arquivo/diretório
+###### Comitar arquivo/diretório
 
 Comitar um arquivo
-git commit meu_arquivo.txt
 
+- git commit meu_arquivo.txt
 
+###### Comitar vários arquivos
 
-Comitar vários arquivos
-git commit meu_arquivo.txt meu_outro_arquivo.txt
+- git commit meu_arquivo.txt meu_outro_arquivo.txt
 
+###### Comitar informando mensagem
 
+- git commit meuarquivo.txt -m "minha mensagem de commit"
 
-Comitar informando mensagem
-git commit meuarquivo.txt -m "minha mensagem de commit"
+###### Remover arquivo/diretório Remover arquivo
 
+- git rm meu_arquivo.txt
 
+###### Remover diretório
 
-Remover arquivo/diretório
-Remover arquivo
-git rm meu_arquivo.txt
+- git rm -r diretorio
 
+###### Visualizar histórico Exibir histórico
 
+- git log
 
-Remover diretório
-git rm -r diretorio
+###### Exibir histórico com diff das duas últimas alterações
 
+- git log -p -2
 
+###### Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))
 
-Visualizar histórico
-Exibir histórico
-git log
+- git log --stat
 
+###### Exibir informações resumidas em uma linha (hash completa e comentário)
 
-
-Exibir histórico com diff das duas últimas alterações
-git log -p -2
-
-
-
-Exibir resumo do histórico (hash completa, autor, data, comentário e qtde de alterações (+/-))
-git log --stat
-
-
-
-Exibir informações resumidas em uma linha (hash completa e comentário)
-git log --pretty=oneline
+- git log --pretty=oneline
 
 ###### git bisect reset
 
-Contribuições
+#### Contribuições
+
 Sinta-se a vontade para realizar adicionar mais informações ou realizar correções. Fork me!
